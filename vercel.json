@@ -2,20 +2,20 @@
   "version": 2,
   "builds": [
     {
-      "src": "start.py", // 项目启动入口文件
-      "use": "@vercel/python", // Vercel Python 运行时
+      "src": "start.py",
+      "use": "@vercel/python",
       "config": {
-        "runtime": "python3.11" // 建议与本地 uv 环境一致的 Python 版本
+        "runtime": "python3.11"
       }
     }
   ],
   "routes": [
     {
-      "src": "/(.*)", // 匹配所有请求路径
-      "dest": "start.py" // 所有请求转发到启动入口处理
+      "src": "/(.*)",
+      "dest": "start.py"
     }
   ],
-  "installCommand": "uv sync", // 覆盖默认 pip install，使用 uv 安装依赖
-  "buildCommand": "echo 'No build step needed'", // 纯 Python Web 服务无需打包，仅占位
-  "startCommand": "uv run start" // 覆盖默认启动指令，使用 uv 启动项目
+  "installCommand": "uv sync",
+  "buildCommand": "echo 'No build step needed'",
+  "startCommand": "uv run start"
 }
