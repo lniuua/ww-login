@@ -17,5 +17,4 @@
   ],
   "installCommand": "uv sync",
   "buildCommand": "echo 'No build step needed'",
-  "startCommand": "uv run start"
 }
