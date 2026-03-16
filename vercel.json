@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "start.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.10"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "start.py"
+    }
+  ],
+  "env": {
+    "HOST": "0.0.0.0",
+    "PORT": "3000"
+  }
+}
